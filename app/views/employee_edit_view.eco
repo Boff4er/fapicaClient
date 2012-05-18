@@ -1,0 +1,71 @@
+<ul id="sub-nav">
+	<% if @edit: %>
+	<li><a class="subButton bBack">Назад</a></li>
+	<% else if @add: %>
+	<li><a class="subButton bCancel">Выход</a></li>
+	<% end %>
+</ul>
+<form>
+	<fieldset>
+		<legend>
+			<% if @edit: %>
+			Редактировать
+			<% else if @add: %>
+			Добавить
+			<% end %>
+		</legend>
+		<label>
+			<span>Терминал</span>
+			<input
+					type="text"
+					name="firstName"
+					value="<%= @employee.firstName %>"
+					required
+					autofocus
+					/>
+		</label>
+		<label>
+			<span>Название:</span>
+			<input
+					type="text"
+					name="lastName"
+					value="<%= @employee.lastName %>"
+					required
+					/>
+		</label>
+
+
+		<label>
+			<span>Активность:</span>
+			<!--
+				   Check date format MM/DD/YYYY  using regex:
+				   @see: http://www.regular-expressions.info/regexbuddy/datemmddyyyy.html
+				-->
+			<input
+					type="text"
+					name="startDate"
+					value="<%= @employee.startDate %>"
+					pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
+					title="Please enter a date formatting MM/DD/YYYY"
+					required
+					/>
+		</label>
+
+		<label><span>Порт:</span>
+			<input
+					type="email"
+					name="email"
+					value="<%= @employee.port %>"
+					required
+					/>
+		</label>
+
+		<div class="formFooter">
+			<button type="submit" class="main-button">Сохранить</button>
+			<% if @edit: %>
+			<button class="bDelete main-button">Удалить</button>
+			<% end %>
+		</div>
+
+	</fieldset>
+</form>

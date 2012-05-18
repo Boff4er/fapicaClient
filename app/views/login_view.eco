@@ -1,0 +1,34 @@
+<form id="login-form">
+	<fieldset>
+		<legend>
+			Login
+		</legend>
+		<label>
+			<input
+					class="inp login"
+					type="text"
+					name="username"
+					pattern="1"
+					title="Введите 'Luke' как логин ;)"
+					required
+					autofocus
+					/>
+		</label>
+
+		<label>
+			<input
+					class="inp password"
+					type="password"
+					name="password"
+					pattern="1"
+					title="Введите 'Skywalker' как пароль ;)"
+					required
+					/>
+		</label>
+
+		<button type="submit" class="submit">Войти</button>
+		
+		<a href="/forgotpassword" class="remarka">Забыли пароль?</a>
+
+	</fieldset>
+</form>

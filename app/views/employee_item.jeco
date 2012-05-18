@@ -1,0 +1,4 @@
+<li class="item">
+	<%= @firstName %>
+	<%= @lastName %>
+</li>

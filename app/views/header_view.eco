@@ -1,0 +1,7 @@
+<span class="back">Назад</span>
+<span class="logo"><img src="/images/logo.png" /></span>
+<div>
+	<p class="main-button"><img src="/images/icon-exit.png" /></p>
+	<p class="settings"><img src="/images/icon-setting.png" /></p>
+	<p style="color: white;" id="greetings" />
+</div>

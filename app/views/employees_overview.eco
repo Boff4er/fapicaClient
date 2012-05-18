@@ -1,0 +1,9 @@
+<ul id="sub-nav">
+	<li><a id="bAdd" class="subButton">Добавить</a></li>
+	<li><a id="bEdit" class="subButton">Редактировать</a></li>
+	<li><a id="bDelete" class="subButton">Уралить</a></li>
+</ul>
+
+<div id="employee-list-container">
+	<ul id="employee-list"/>
+</div>

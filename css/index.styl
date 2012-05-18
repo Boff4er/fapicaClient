@@ -1,0 +1,256 @@
+@import './mixin'
+
+/*
+	global vars
+*/
+main-content-width = 100%
+main-content-margin = 0 auto
+
+mainfont = "Helvetica Neue", helvetica, arial, sans-serif
+mainFontSize = 17px
+transition-duration = .5s
+transition-ease = linear
+
+/*
+	global tags
+*/
+body
+html
+p
+  padding: 0
+  margin: 0
+
+*:focus
+	outline: none
+
+body
+  font: mainFontSize/19px mainfont
+  color: #363636
+  font-weight: normal
+  background-color: #F4F4F4
+
+a
+  text-decoration: underline
+  color: #888
+  &:hover
+    color: #333
+
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+.main-view
+	width: main-content-width
+	margin: main-content-margin
+	padding: 0px 0 0 0
+
+.main-view-content
+	position: relative /* needed to move header content */
+	border-box()
+
+legend
+	display: none
+
+fieldset
+	border: none
+	
+#login-form 
+	width: 265px
+	height: 121px
+	background-color: #41423d
+	border-radius: 4px
+	margin: 0 auto
+	margin-top: 30px
+	padding: 20px 10px
+	
+#login-form 
+	.inp 
+		height: 30px
+		border-radius: 3px
+		border: 1px solid #474747
+		border-bottom: 1px solid #7f7f7d
+		background: url("/images/inp-bg.jpg")
+		color: #737373
+		padding-left: 10px
+		margin-bottom: 16px
+		
+		&:focus
+			background: #FFF
+			border: 1px solid #555
+
+			&:invalid
+				background: #FFF url("images/invalid.png") no-repeat 98% center !important
+				border-color: #FF3366
+				
+		&:required:valid
+			background: #FFF url("images/valid.png") no-repeat 98% center
+
+#login-form 
+	.login 
+		width: 228px
+		
+#login-form 
+	.password 
+		width: 140px
+		margin-top: 3px
+		
+#login-form 
+	.pass
+		float: left
+		
+#login-form 
+	.submit
+		float: right
+		width: 72px
+		height: 35px
+		color: #fff
+		border: none
+		border-bottom: 1px solid #233d10
+		border-radius: 4px
+		background-color: #62983a
+		font-weight: bold
+		margin: 3px 0 0 10px
+		
+		&:hover
+			background-color: #7bcd40
+			cursor: pointer
+
+#login-form 
+	.remarka 
+		display: block
+		font-size: 10px
+		text-decoration: none
+		margin: -2px 0 0 5px
+		color: #fff
+		
+		&:hover
+			text-decoration: underline
+
+header
+footer
+.content
+	width: main-content-width
+	margin: main-content-margin
+
+header
+	height: 49px
+	background: url('/images/top-bg.jpg')
+	
+	.logo
+		left: 50%
+		margin-left: -30px
+		position: absolute
+		margin-top: 15px
+		
+	span.back
+		position: absolute
+		text-decoration: underline
+		color: red
+
+	div
+		position: relative
+		display: block
+		height: 50px
+
+		p#greetings
+			position: absolute
+			bottom: 4px
+			left: 40px
+
+		p.main-button
+			position: absolute
+			right: 20px
+			bottom: 11px
+		
+		p.settings
+			position: absolute
+			right: 60px
+			bottom: 10px
+			
+			&:hover
+				cursor: pointer
+		
+
+
+footer
+	border: 1px solid blue
+	padding-top: 8px
+	font-size: 15px
+	line-height: 21px
+	color: #888
+	text-align: center
+	text-shadow: white 1px 1px 1px
+
+
+
+
+.main-button
+
+	padding: 0 0
+
+	font-size: 17px
+
+	text-align: center
+
+	&:hover
+		color: #363636
+		cursor: pointer
+
+
+.subButton
+	display:block
+	border-box()
+	width: 100px
+
+	padding: 5px 0
+
+	vbg-gradient(#FFF, #F4F4F4)
+	border: 1px solid #363636;
+
+	color: #363636;
+	font-size: 15px
+
+	text-decoration: none
+	text-align: center
+
+	&:hover
+		opacity:.85;
+		cursor: pointer
+		vbg-gradient(#F4F4F4, #FFF)
+
+
+#employee-list-container
+	overflow-y: auto
+	height: 340px
+
+#employee-list
+	width: 100%
+
+	li
+		padding: 15px 30px
+		transition( background-color, transition-duration, transition-ease )
+
+		&:hover
+			background-color: #888
+			color: #FFF
+
+		&.active
+			background-color: #888
+			color: #FFF
+
+
+
+#sub-nav
+	hbox()
+	height: 60px
+	width: 100%
+	background-color: #F4F4F4
+
+	li
+		padding-left: 30px
+
+.stack
+  > *:not(.active)
+    display: none
+
